@@ -10,6 +10,7 @@
 		6585F10918CC9FE300DAB148 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6585F10818CC9FE300DAB148 /* Foundation.framework */; };
 		6585F10C18CC9FE300DAB148 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6585F10B18CC9FE300DAB148 /* main.m */; };
 		6585F11018CC9FE300DAB148 /* howto_link_assimp_library_in_osx_app.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6585F10F18CC9FE300DAB148 /* howto_link_assimp_library_in_osx_app.1 */; };
+		6585F11718CCA23700DAB148 /* libassimp.3.0.255.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6585F11618CCA23700DAB148 /* libassimp.3.0.255.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		6585F10B18CC9FE300DAB148 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6585F10E18CC9FE300DAB148 /* howto-link-assimp-library-in-osx-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "howto-link-assimp-library-in-osx-app-Prefix.pch"; sourceTree = "<group>"; };
 		6585F10F18CC9FE300DAB148 /* howto_link_assimp_library_in_osx_app.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = howto_link_assimp_library_in_osx_app.1; sourceTree = "<group>"; };
+		6585F11618CCA23700DAB148 /* libassimp.3.0.255.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.3.0.255.dylib; path = ../../../usr/local/Cellar/assimp/3.0.1270/lib/libassimp.3.0.255.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6585F11718CCA23700DAB148 /* libassimp.3.0.255.dylib in Frameworks */,
 				6585F10918CC9FE300DAB148 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +68,7 @@
 		6585F10718CC9FE300DAB148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6585F11618CCA23700DAB148 /* libassimp.3.0.255.dylib */,
 				6585F10818CC9FE300DAB148 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -229,6 +233,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "howto-link-assimp-library-in-osx-app/howto-link-assimp-library-in-osx-app-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/assimp/3.0.1270/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -238,6 +246,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "howto-link-assimp-library-in-osx-app/howto-link-assimp-library-in-osx-app-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/assimp/3.0.1270/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
